@@ -8,10 +8,6 @@ import android.database.sqlite.SQLiteStatement;
 
 import androidx.annotation.Nullable;
 
-/**
- * Created by Quoc Nguyen on 13-Dec-16.
- */
-
 public class SQLiteHelperRequests extends SQLiteOpenHelper {
 
 

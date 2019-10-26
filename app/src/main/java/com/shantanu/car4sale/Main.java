@@ -2,6 +2,8 @@ package com.shantanu.car4sale;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
@@ -62,6 +64,7 @@ public class Main extends AppCompatActivity {
         sqLiteHelper.insertData("Corvette","2019","23500600",byteArray1);
     }
 
+    @SuppressLint("SetTextI18n")
     public void CreateTable() {
         SQLiteHelper sqLiteHelper1 = new SQLiteHelper(ContextResolverApp.getAppContext(), "CarsDb.sqlite", null, 1);
         sqLiteHelper1.queryData(getResources().getString(R.string.queryTable));
@@ -133,7 +136,7 @@ public class Main extends AppCompatActivity {
             }
             return c;
         }
-        public void showPopUpView (View v, final int id){
+        public void showPopUpView (final int id){
             myDialog.setContentView(R.layout.fragment_display_single_ad);
             Car c = getDatafromSqlite(id);
             TextView t1 = myDialog.findViewById(R.id.ShowCarName);
@@ -158,10 +161,11 @@ public class Main extends AppCompatActivity {
         tr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showPopUpView(v,id);
+                showPopUpView(id);
             }
         });
     }
+    @SuppressLint("SetTextI18n")
     public void SendMessage (View v, final int id){
         myDialog.setContentView(R.layout.fragment_display_send_request);
         TextView t1 = myDialog.findViewById(R.id.SRid);

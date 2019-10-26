@@ -5,13 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -50,7 +48,7 @@ public class ViewRequests extends AppCompatActivity {
             label_name.setPadding(5, 5, 5, 5);
             tr_head.addView(label_name);
             tableLayout.addView(tr_head, new TableLayout.LayoutParams(
-                    TableLayout.LayoutParams.MATCH_PARENT,                    //part4
+                    TableLayout.LayoutParams.MATCH_PARENT,
                     TableLayout.LayoutParams.WRAP_CONTENT));
         }
     }

@@ -1,33 +1,25 @@
 package com.shantanu.car4sale;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Objects;
 
 public class CreateAd extends AppCompatActivity implements View.OnClickListener {
     EditText e1,e2,e3;
     Bitmap bitmap;
     public static SQLiteHelper sqLiteHelper;
     private static final int CAMERA_REQUEST = 1888;
-    private static final int MY_CAMERA_PERMISSION_CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +77,7 @@ public class CreateAd extends AppCompatActivity implements View.OnClickListener 
         }
         if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK)
         {
-            bitmap = (Bitmap) data.getExtras().get("data");
+            bitmap = (Bitmap) Objects.requireNonNull(data.getExtras()).get("data");
             ImageView imageView = findViewById(R.id.imageView);
             imageView.setImageBitmap(bitmap);
         }
