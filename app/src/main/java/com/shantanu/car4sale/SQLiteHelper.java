@@ -26,7 +26,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         statement.bindString(2, model);
         statement.bindString(3, price);
         statement.bindBlob(4, image);
-        System.out.println(statement);
         statement.executeInsert();
     }
 

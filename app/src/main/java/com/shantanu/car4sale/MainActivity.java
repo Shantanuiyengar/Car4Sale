@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     EditText e1,e2;
@@ -29,28 +28,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v.getId() == R.id.LoginButton) {
             String user = String.valueOf(e1.getText());
             String pass = String.valueOf(e2.getText());
-            System.out.println(getResources().getString(R.string.Email));
-            if (user.equals(getResources().getString(R.string.Email))) {
+            if (user.equals(getResources().getString(R.string.Email)))
                 if (pass.equals(getResources().getString(R.string.Password))) {
-                  startActivity(new Intent(this, Main.class));
+                    startActivity(new Intent(this, Main.class));
                     finish();
-                } else {
-                    Toast.makeText(this, "Password is Incorrect", Toast.LENGTH_LONG).show();
                 }
-            } else {
-                Toast.makeText(this, "Email is incorrect", Toast.LENGTH_LONG).show();
-            }
-            if (user.equals(getResources().getString(R.string.EmailReq))) {
+            if (user.equals(getResources().getString(R.string.EmailReq)))
                 if (pass.equals(getResources().getString(R.string.Password))) {
                     startActivity(new Intent(this, ViewRequests.class));
                     finish();
-                } else {
-                    Toast.makeText(this, "Password is Incorrect", Toast.LENGTH_LONG).show();
                 }
-            } else {
-                Toast.makeText(this, "Email is incorrect", Toast.LENGTH_LONG).show();
-            }
-
         }
     }
 }

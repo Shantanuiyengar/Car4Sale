@@ -42,7 +42,7 @@ public class Main extends AppCompatActivity {
             CreateDummyData(sqLiteHelper);
         }
         catch (Exception e){
-            System.out.println("Table already Exists");
+//            System.out.println("Table already Exists");
         }
         CreateTable();
     }
@@ -132,7 +132,6 @@ public class Main extends AppCompatActivity {
                 c = new Car(id, cursor.getString(1), cursor.getString(2),
                         cursor.getString(3), BitmapFactory
                         .decodeByteArray(cursor.getBlob(4), 0, cursor.getBlob(4).length));
-                System.out.println(c.id + "\t" + c.name + "\t" + c.model + "\t" + c.price);
             }
             return c;
         }

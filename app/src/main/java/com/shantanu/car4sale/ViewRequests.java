@@ -29,7 +29,6 @@ public class ViewRequests extends AppCompatActivity {
         SQLiteHelperRequests sqLiteHelper1 = new SQLiteHelperRequests(ContextResolverApp.getAppContext(), "CarsDbReq.sqlite", null, 1);
         sqLiteHelper1.queryData(getResources().getString(R.string.queryReqTable));
         final Cursor cursor = sqLiteHelper1.getData("SELECT * FROM CARREQUESTS");
-        System.out.println(cursor);
         while (cursor.moveToNext()) {
             tr_head = new TableRow(this);
             int id = cursor.getInt(0);
