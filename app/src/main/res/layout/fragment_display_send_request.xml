@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_red_light"
+    android:padding="5dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/SRid"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/SRName"
+        android:layout_below="@+id/SRid"
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:text="Name:" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:id="@+id/SRgetName"
+        android:layout_below="@id/SRName"
+        android:hint="Type your name here"/>
+
+    <TextView
+        android:id="@+id/SRDesc"
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:layout_below="@+id/SRgetName"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:text="Desciptions" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="25sp"
+        android:inputType="textMultiLine"
+        android:id="@+id/SRgetDesc"
+        android:layout_below="@id/SRDesc"
+        android:hint="Type description here"/>
+    <Button
+        android:id="@+id/SRsendRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SRgetDesc"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Send Request"
+        android:textSize="25sp"/>
+
+</RelativeLayout>

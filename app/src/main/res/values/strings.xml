@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Car4Sale</string>
+    <string name="queryTable">CREATE TABLE IF NOT EXISTS CARS(Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, model VARCHAR, price VARCHAR, image BLOB)</string>
+    <string name="queryTableDummyData">CREATE TABLE CARS(Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, model VARCHAR, price VARCHAR, image BLOB)</string>
+    <string name="queryReqTable">CREATE TABLE IF NOT EXISTS CARREQUESTS(Id INTEGER PRIMARY KEY AUTOINCREMENT, NAME VARCHAR, DESC VARCHAR,IDC INTEGER)</string>
+    <string name="Email">test@aigen.tech</string>
+    <string name="EmailReq">developer@aigen.tech</string>
+    <string name="Password">AigenTech</string>
+</resources>
